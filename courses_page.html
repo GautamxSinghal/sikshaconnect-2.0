@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - SikshaConnect 2.0</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap"></i> SikshaConnect
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="courses.html" class="nav-link active">Courses</a></li>
+                <li><a href="about_us.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" onclick="toggleTheme()">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                </li>
+            </ul>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="section">
+            <div class="container">
+                <h1 class="section-title">Explore Our Courses</h1>
+                
+                <!-- Course Controls -->
+                <div class="course-controls">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search courses..." id="courseSearch">
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="technology">Technology</button>
+                        <button class="filter-btn" data-filter="business">Business</button>
+                        <button class="filter-btn" data-filter="design">Design</button>
+                        <button class="filter-btn" data-filter="science">Science</button>
+                    </div>
+                </div>
+
+                <!-- Course Grid -->
+                <div class="course-grid" id="courseGrid">
+                    <div class="course-card" data-category="technology" data-difficulty="beginner">
+                        <div class="course-image">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="course-content">
+                            <span class="course-category">Technology</span>
+                            <h3 class="course-title">Web Development Fundamentals</h3>
+                            <p class="course-description">Learn HTML, CSS, and JavaScript to build modern, responsive websites from scratch. Perfect for beginners starting their web development journey.</p>
+                            <div class="course-meta">
+                                <span class="difficulty beginner">Beginner</span>
+                                <span style="color: var(--text-muted); font-size: 0.9rem;">
+                                    <i class="fas fa-clock"></i> 40 hours
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="science" data-difficulty="intermediate">
+                        <div class="course-image">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="course-content">
+                            <span class="course-category">Science</span>
+                            <h3 class="course-title">Data Science Essentials</h3>
+                            <p class="course-description">Master data analysis, visualization, and machine learning with Python. Transform raw data into actionable insights for business decisions.</p>
+                            <div class="course-meta">
+                                <span class="difficulty intermediate">Intermediate</span>
+                                <span style="color: var(--text-muted); font-size: 0.9rem;">
+                                    <i class="fas fa-clock"></i> 60 hours
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="design" data-difficulty="beginner">
+                        <div class="course-image">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="course-content">
+                            <span class="course-category">Design</span>
+                            <h3 class="course-title">Digital Design Mastery</h3>
+                            <p class="course-description">Create stunning visual designs using industry-standard tools. Learn UI/UX principles, color theory, and typography fundamentals.</p>
+                            <div class="course-meta">
+                                <span class="difficulty beginner">Beginner</span>
+                                <span style="color: var(--text-muted); font-size: 0.9rem;">
+                                    <i class="fas fa-clock"></i> 35 hours
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="business" data-difficulty="intermediate">
+                        <div class="course-image">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="course-content">
+                            <span class="course-category">Business</span>
+                            <h3 class="course-title">Digital Marketing Strategy</h3>
+                            <p class="course-description">Build comprehensive digital marketing campaigns across social media, email, and content marketing to grow your business online.</p>
+                            <div class="course-meta">
+                                <span class="difficulty intermediate">Intermediate</span>
+                                <span style="color: var(--text-muted); font-size: 0.9rem;">
+                                    <i class="fas fa-clock"></i> 45 hours
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="technology" data-difficulty="advanced">
+                        <div class="course-image">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="course-content">
+                            <span class="course-category">Technology</span>
+                            <h3 class="course-title">Mobile App Development</h3>
+                            <p class="course-description">Build native mobile applications for iOS and Android. Learn React Native, API integration, and mobile-specific design patterns.</p>
+                            <div class="course-meta">
+                                <span class="difficulty advanced">Advanced</span>
+                                <span style="color: var(--text-muted); font-size: 0.9rem;">
+                                    <i class="fas fa-clock"></i> 80 hours
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="business" data-difficulty="beginner">
+                        <div class="course-image">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="course-content">
+                            <span class="course-category">Business</span>
+                            <h3 class="course-title">Entrepreneurship Basics</h3>
+                            <p class="course-description">Learn the fundamentals of starting and running a successful business. From idea validation to funding strategies and growth planning.</p>
+                            <div class="course-meta">
+                                <span class="difficulty beginner">Beginner</span>
+                                <span style="color: var(--text-muted); font-size: 0.9rem;">
+                                    <i class="fas fa-clock"></i> 30 hours
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="science" data-difficulty="advanced">
+                        <div class="course-image">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="course-content">
+                            <span class="course-category">Science</span>
+                            <h3 class="course-title">Artificial Intelligence Fundamentals</h3>
+                            <p class="course-description">Explore the world of AI and machine learning. Build intelligent systems using neural networks, deep learning, and natural language processing.</p>
+                            <div class="course-meta">
+                                <span class="difficulty advanced">Advanced</span>
+                                <span style="color: var(--text-muted); font-size: 0.9rem;">
+                                    <i class="fas fa-clock"></i> 70 hours
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="design" data-difficulty="intermediate">
+                        <div class="course-image">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="course-content">
+                            <span class="course-category">Design</span>
+                            <h3 class="course-title">Photography & Visual Storytelling</h3>
+                            <p class="course-description">Master the art of visual storytelling through photography. Learn composition, lighting, editing, and how to create compelling narratives.</p>
+                            <div class="course-meta">
+                                <span class="difficulty intermediate">Intermediate</span>
+                                <span style="color: var(--text-muted); font-size: 0.9rem;">
+                                    <i class="fas fa-clock"></i> 50 hours
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Chatbot -->
+    <div id="chatbot-container"></div>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+    <script src="chatbot.js"></script>
+    <script>
+        // Initialize courses page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            initCourseFiltering();
+        });
+    </script>
+</body>
+</html>

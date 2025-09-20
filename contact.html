@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - SikshaConnect 2.0</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap"></i> SikshaConnect
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="courses.html" class="nav-link">Courses</a></li>
+                <li><a href="about_us.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" onclick="toggleTheme()">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                </li>
+            </ul>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="section">
+            <div class="container">
+                <h1 class="section-title">Get in Touch</h1>
+                <p style="text-align: center; font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 3rem;">
+                    Have questions about our courses? Want to partner with us? We'd love to hear from you!
+                </p>
+
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <h3 style="margin-bottom: 1.5rem; color: var(--text-color);">Send us a Message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                                <div class="error hidden" id="nameError">Please enter your full name</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                                <div class="error hidden" id="emailError">Please enter a valid email address</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea id="message" name="message" class="form-input form-textarea" required></textarea>
+                                <div class="error hidden" id="messageError">Please enter your message</div>
+                            </div>
+
+                            <button type="submit" class="cta-button" style="width: 100%;">Send Message</button>
+                            <div class="success hidden" id="formSuccess">Thank you! Your message has been sent successfully.</div>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h3 style="margin-bottom: 1.5rem; color: var(--text-color);">Contact Information</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <strong>Email</strong><br>
+                                <a href="mailto:hello@sikshaconnect.org" style="color: var(--primary-color); text-decoration: none;">
+                                    hello@sikshaconnect.org
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <strong>Phone</strong><br>
+                                <a href="tel:+1234567890" style="color: var(--primary-color); text-decoration: none;">
+                                    +91 1234567898
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <strong>Address</strong><br>
+                                123 Education Street<br>
+                                Learning District, Abpur 12345
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <div>
+                                <strong>Social Media</strong><br>
+                                <a href="#" style="color: var(--primary-color); text-decoration: none; margin-right: 1rem;">Twitter</a>
+                                <a href="#" style="color: var(--primary-color); text-decoration: none; margin-right: 1rem;">LinkedIn</a>
+                                <a href="#" style="color: var(--primary-color); text-decoration: none;">Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="map-container">
+                    <div style="text-align: center;">
+                        <i class="fas fa-map-marked-alt" style="font-size: 3rem; color: var(--text-muted); margin-bottom: 1rem;"></i>
+                        <p style="color: var(--text-muted); font-size: 1.1rem;">Interactive Map Coming Soon</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Our offices are located in the heart of the Learning District</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Chatbot -->
+    <div id="chatbot-container"></div>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+    <script src="chatbot.js"></script>
+    <script>
+        // Initialize contact page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            initContactForm();
+        });
+    </script>
+</body>
+</html>

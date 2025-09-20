@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SikshaConnect 2.0 - Quality Education for All</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap"></i> SikshaConnect
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="courses_page.html" class="nav-link">Courses</a></li>
+                <li><a href="about_us.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" onclick="toggleTheme()">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                </li>
+            </ul>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Quality Education for Everyone</h1>
+                <p>Bridging the education gap with accessible, engaging, and transformative learning experiences for students worldwide.</p>
+                <a href="courses.html" class="cta-button">Start Learning Today</a>
+            </div>
+        </section>
+
+        <!-- About Preview -->
+        <section class="section">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">Empowering Minds Globally</h2>
+                    <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
+                        At SikshaConnect, we believe that quality education should be accessible to every individual, regardless of their background, location, or economic status. Our platform combines cutting-edge technology with pedagogical excellence to create meaningful learning experiences.
+                    </p>
+                    <a href="about_us.html" class="cta-button">Learn More About Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Course Highlights -->
+        <section class="section" style="background: var(--surface-color);">
+            <div class="container">
+                <h2 class="section-title">Featured Courses</h2>
+                <div class="course-slider">
+                    <div class="slider-container" id="courseSlider">
+                        <div class="slide">
+                            <h3><i class="fas fa-code"></i> Web Development Fundamentals</h3>
+                            <p>Master the building blocks of the modern web. Learn HTML, CSS, JavaScript, and responsive design principles to create beautiful, functional websites that work across all devices.</p>
+                        </div>
+                        <div class="slide">
+                            <h3><i class="fas fa-chart-line"></i> Data Science Essentials</h3>
+                            <p>Dive into the world of data analysis and machine learning. Discover how to extract insights from complex datasets and make data-driven decisions that drive real business value.</p>
+                        </div>
+                        <div class="slide">
+                            <h3><i class="fas fa-palette"></i> Digital Design Mastery</h3>
+                            <p>Unleash your creativity with comprehensive design training. From user interface design to brand identity, learn the principles and tools that bring ideas to visual life.</p>
+                        </div>
+                    </div>
+                    <div class="slider-dots" id="sliderDots"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Our Global Impact</h2>
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <div class="impact-number" data-target="15000">0</div>
+                        <div class="impact-label">Students Reached</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-number" data-target="50000">0</div>
+                        <div class="impact-label">Lessons Completed</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-number" data-target="12">0</div>
+                        <div class="impact-label">Languages Supported</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-number" data-target="95">0</div>
+                        <div class="impact-label">Completion Rate (%)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Chatbot -->
+    <div id="chatbot-container"></div>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+    <script src="chatbot.js"></script>
+    <script>
+        // Initialize home page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            initSlider();
+            startSlider();
+            animateCounters();
+        });
+    </script>
+</body>
+</html>
